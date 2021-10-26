@@ -82,7 +82,7 @@ if (isset($_POST["submit"])) {
 	</div>
 	<div class="container">
 	<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-bottom">
-    <span align = "bottom" class="text-muted" >&copy; 2021 Company, Inc</span>
+    <span align = "bottom" class="text-muted" >&copy; 2021 Company</span>
     
   </footer>
   </div>
