@@ -61,17 +61,18 @@ if (isset($_POST["submit"])) {
 												<input class="form-control" type="text" name="nama" id="nama" value="<?= $queryguru["nama"]; ?>">	
 											</div>
 											<div class="mb-3" align="">
-												<label class="form-label" for="tanggal_lahir">Alamat :</label>
-												<input class="form-control" type="text" name="alamat" id="alamat" value="<?= $queryguru["alamat"]; ?>">	
-											</div>
-											<div class="mb-3" align="">
 												<label class="form-label" for="jenis_kelamin">Jenis Kelamin :</label>
-												<input class="form-control" type="text" name="jenis_kelamin" id="jenis_kelamin" value="<?= $queryguru["jenis_kelamin"]; ?>">
+												<input class="form-control" type="text" name="jenis_kelamin"  value="<?= $queryguru["jenis_kelamin"]; ?>">
 											</div>
 											<div class="mb-3" align="">
 												<label class="form-label" for="tanggal_lahir">Tanggal Lahir :</label>
-												<input class="form-control" type="text" name="tanggal_lahir" id="tanggal_lahir" value="<?= $queryguru["tanggal_lahir"]; ?>">
+												<input class="form-control" type="text" name="tanggal_lahir" value="<?= $queryguru["tanggal_lahir"]; ?>">
+											</div>											
+											<div class="mb-3" align="">
+												<label class="form-label" for="tanggal_lahir">Alamat :</label>
+												<input class="form-control" type="text" name="alamat" id="alamat" value="<?= $queryguru["alamat"]; ?>">	
 											</div>
+
 											<div class="mb-3" align="">
 												<button type="submit" name="submit" class="btn btn-primary">Ubah Data</button>
 											</div>

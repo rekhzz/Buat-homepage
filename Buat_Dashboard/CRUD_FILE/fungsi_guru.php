@@ -68,7 +68,7 @@ function update_guru ($data_guru) {
                 alamat = '$alamat'
                 WHERE id = $id
                 ";
-        mysqli_query($link,$query_guru);
+        mysqli_query($link,$query);
 
         return mysqli_affected_rows ($link);
 
