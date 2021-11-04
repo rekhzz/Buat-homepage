@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 22 Agu 2021 pada 03.54
--- Versi server: 10.4.20-MariaDB
--- Versi PHP: 7.3.29
+-- Generation Time: Nov 04, 2021 at 03:26 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_jurusan`
+-- Table structure for table `tbl_guru`
+--
+
+CREATE TABLE `tbl_guru` (
+  `id` int(25) NOT NULL,
+  `NIP` int(30) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `jenis_kelamin` varchar(30) NOT NULL,
+  `alamat` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_guru`
+--
+
+INSERT INTO `tbl_guru` (`id`, `NIP`, `nama`, `tanggal_lahir`, `jenis_kelamin`, `alamat`) VALUES
+(3, 20210001, 'Budi Santoso', '1920-02-25', 'Laki Laki', 'Perum Godong Gede RT.01 RW.02');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_jurusan`
 --
 
 CREATE TABLE `tbl_jurusan` (
@@ -33,7 +55,7 @@ CREATE TABLE `tbl_jurusan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_jurusan`
+-- Dumping data for table `tbl_jurusan`
 --
 
 INSERT INTO `tbl_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
@@ -43,7 +65,7 @@ INSERT INTO `tbl_jurusan` (`id_jurusan`, `nama_jurusan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_siswa`
+-- Table structure for table `tbl_siswa`
 --
 
 CREATE TABLE `tbl_siswa` (
@@ -55,16 +77,16 @@ CREATE TABLE `tbl_siswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_siswa`
+-- Dumping data for table `tbl_siswa`
 --
 
 INSERT INTO `tbl_siswa` (`id`, `nis`, `nama_siswa`, `tanggal_lahir`, `jenis_kelamin`) VALUES
-(13, '2021001', 'Akbar Maulana', '2003-07-08', 'Laki-Laki');
+(13, '2021001', 'Akbar Maulana', '2003-07-09', 'Laki-Laki');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_walikelas`
+-- Table structure for table `tbl_walikelas`
 --
 
 CREATE TABLE `tbl_walikelas` (
@@ -74,7 +96,7 @@ CREATE TABLE `tbl_walikelas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `tbl_walikelas`
+-- Dumping data for table `tbl_walikelas`
 --
 
 INSERT INTO `tbl_walikelas` (`nip`, `nama_wali_kelas`, `tanggal_lahir`) VALUES
@@ -86,31 +108,43 @@ INSERT INTO `tbl_walikelas` (`nip`, `nama_wali_kelas`, `tanggal_lahir`) VALUES
 --
 
 --
--- Indeks untuk tabel `tbl_jurusan`
+-- Indexes for table `tbl_guru`
+--
+ALTER TABLE `tbl_guru`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_jurusan`
 --
 ALTER TABLE `tbl_jurusan`
   ADD PRIMARY KEY (`id_jurusan`),
   ADD KEY `id_jurusan` (`id_jurusan`);
 
 --
--- Indeks untuk tabel `tbl_siswa`
+-- Indexes for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   ADD PRIMARY KEY (`nis`),
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Indeks untuk tabel `tbl_walikelas`
+-- Indexes for table `tbl_walikelas`
 --
 ALTER TABLE `tbl_walikelas`
   ADD PRIMARY KEY (`nip`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_siswa`
+-- AUTO_INCREMENT for table `tbl_guru`
+--
+ALTER TABLE `tbl_guru`
+  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_siswa`
 --
 ALTER TABLE `tbl_siswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;

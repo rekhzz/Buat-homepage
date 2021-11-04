@@ -1,5 +1,5 @@
 <?php 
-require 'fungsi.php' ;
+require 'fungsi_guru.php' ;
 
 $id = $_GET["id_guru"];
 
@@ -8,7 +8,7 @@ $queryguru = query_guru ("SELECT * FROM tbl_guru WHERE NIP = $id")[0];
 
 if (isset($_POST["submit"])) {
 
-	if (update_siswa($_POST) > 0) {
+	if (update_guru ($_POST) > 0) {
 		echo "
 		<script>
 			alert('Data Berhasil Diubah');
@@ -53,12 +53,12 @@ if (isset($_POST["submit"])) {
 					<input type="hidden" name="id" value="<?= $queryguru["id"]; ?>">
 							<div class="row">
 											<div class="mb-3" align="">
-												<label class="form-label" for="nis">NIP :</label>
+												<label class="form-label" for="nip">NIP :</label>
 												<input class="form-control" type="text" name="NIP" id="NIP" required value="<?= $queryguru["NIP"]; ?>">	
 											</div>
 											<div class="mb-3" align="">
 												<label class="form-label" for="nama">Nama :</label>
-												<input class="form-control" type="text" name="nama_guru" id="nama_guru" value="<?= $queryguru["nama"]; ?>">	
+												<input class="form-control" type="text" name="nama" id="nama" value="<?= $queryguru["nama"]; ?>">	
 											</div>
 											<div class="mb-3" align="">
 												<label class="form-label" for="tanggal_lahir">Alamat :</label>

@@ -1,6 +1,6 @@
 <?php 
-    require 'fungsi.php' ;
-    $guru = query_siswa("SELECT * FROM tbl_guru");
+    require 'fungsi_guru.php' ;
+    $guru = query_guru("SELECT * FROM tbl_guru");
 
 
     if (isset($_POST["cari_guru"])) {

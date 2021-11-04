@@ -1,6 +1,6 @@
 <?php 
 
-require 'fungsi.php';
+require 'fungsi_guru.php';
 
 	$id = $_GET["id_guru"];
 
